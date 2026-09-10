@@ -3,6 +3,7 @@
 namespace contacts\webapp\assets;
 
 use webcraftdg\framework\web\AssetBundle;
+use webcraftdg\framework\web\View;
 
 class AppAsset extends AssetBundle
 {
@@ -17,5 +18,9 @@ class AppAsset extends AssetBundle
 
     public array $css = [
         'main'
+    ];
+
+    public array $jsOptions = [
+        'pos' => View::POS_BODY_END
     ];
 }

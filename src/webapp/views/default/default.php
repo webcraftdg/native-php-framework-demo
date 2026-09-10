@@ -10,6 +10,7 @@ use webcraftdg\framework\web\Url;
 
 ?>
 <main role="main" id="main">
+     <app-root></app-root>
     <div class="flex header">
         <h1 class="flex-1 title" >Contact List</h1>
         <div class=" flex-2">

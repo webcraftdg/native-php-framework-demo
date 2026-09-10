@@ -8,6 +8,7 @@ $config = [
     'web' => [
         'controllerNamespace' => 'contacts\\webapp\\controllers',
         'basePath' => dirname(__DIR__).DIRECTORY_SEPARATOR.'webapp',
+        'baseWebPath' => dirname(__DIR__).DIRECTORY_SEPARATOR.'www',
     ],
     'connection' => [
         'dsn' => getstrenv('DB_DRIVER').':host=' . getstrenv('DB_HOST') . ';port=' . getstrenv('DB_PORT') . ';dbname=' . getstrenv('DB_DATABASE').';charset='.getstrenv('DB_CHARSET', 'utf8mb4'),

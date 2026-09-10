@@ -7,15 +7,17 @@
  * @version XXX
  * @package webapp\views\layouts
  *
- * @var $this View
- * @var $content string
+ * @var use webcraftdg\framework\web\View $this
+ * @var string $content
  */
 
+use contacts\webapp\assets\AngularAsset;
 use webcraftdg\framework\App;
 use webcraftdg\framework\web\Html;
 use contacts\webapp\assets\AppAsset;
 $class = 'wrapper';
-$baseUrl = AppAsset::register($this)->basePath;
+AppAsset::register($this);
+AngularAsset::register($this);
 ?>
     <!DOCTYPE html>
     <?php echo Html::beginTag('html', ['lang' => App::$app->language]); ?>
@@ -33,8 +35,9 @@ $baseUrl = AppAsset::register($this)->basePath;
     </head>
 <?php echo Html::beginTag('body', ['class' => '']); ?>
 <?php
+echo $this->startPageBody();
 echo $content;
-echo $this->endPage();
+echo $this->endPageBody();
 ?>
 <?php echo Html::endTag('body'); ?>
 <?php echo Html::endTag('html');
