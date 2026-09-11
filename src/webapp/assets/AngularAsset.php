@@ -21,11 +21,11 @@ class AngularAsset extends AssetBundle
     }
    
     public array $js = [
-        'main-VSECMQUZ.js',
+        'main',
     ];
 
     public array $css = [
-        'styles-5INURTSO.css',
+        'styles',
     ];
 
     public array $jsOptions = [
